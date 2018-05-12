@@ -1,5 +1,3 @@
-<import src="/templates/band-grid/band-grid-template.wxml" />
-<import src="/templates/day-shows/day-shows-template.wxml" />
 <view class="band-info">
     <image wx:if="{{band.band_cover}}" class="band-img" src="http://localhost/GuDao/Public/img/band/{{band.band_id}}/cover.jpg"></image>
     <image wx:else class="band-img" src="/images/band-default.jpg"></image>

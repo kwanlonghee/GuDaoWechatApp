@@ -16,6 +16,7 @@ page {
 }
 .show-title-container{
     margin-bottom: 10rpx;
+    text-align: center;
 }
 .show-title-container .show-title{
     color:#ffd700;
@@ -25,6 +26,7 @@ page {
     display: flex;
     flex-direction: column;
     width:710rpx;
+    padding-left: 90rpx;
 }
 .show-info text{
     margin:6rpx 0;

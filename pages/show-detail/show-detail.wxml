@@ -1,14 +1,20 @@
 <view class="show-info-container">
-    <image class="show-img" src="/images/show-default.jpg"></image>
+    <image wx:if="{{show.show_poster}}" class="show-img" src="http://localhost/GuDao/Public/img/show/{{show.show_id}}.jpg"></image>
+    <image wx:else class="show-img" src="/images/show-default.jpg"></image>
     <view class="show-title-container">
-        <text class="show-title">演出名称</text>
+        <text class="show-title">{{show.show_name}}</text>
     </view>
     <view class="show-info">
-        <text class="show-bands">参演乐队：乐队1、乐队2</text>
-        <text class="show-location">演出地点：演出地点</text>
-        <text class="show-location-detail">具体地点：演出具体地点</text>
-        <text class="show-time">演出时间：2018/04/15 13：00</text>
-        <text class="show-tickets">演出门票：免票</text>
+        <text class="show-bands">参演乐队：
+            <block wx:for="{{bandList}}" wx:for-item="band" wx:for-index="idx">
+                <text wx:if="{{idx == 0}}">{{band.band_name}}</text>
+                <text wx:else>\t/\t{{band.band_name}}</text>
+            </block>
+        </text>
+        <text class="show-location">演出地点：{{show.show_place}}</text>
+        <text class="show-location-detail">具体地点：{{show.show_address}}</text>
+        <text class="show-time">演出时间：{{show.show_time}}</text>
+        <text class="show-tickets">演出门票：{{show.show_ticket}}</text>
     </view>
 </view>
 
@@ -17,18 +23,18 @@
         <view class="tab {{(detailBand == 1) ?'on':''}}" bindtap='detailBandSwitch' id="1">
             <text>详情</text>
         </view>
-        <view class="tab {{(detailBand == 2) ?'on':''}}" bindtap='detailBandSwitch'id="2">
+        <view class="tab {{(detailBand == 2) ?'on':''}}" bindtap='detailBandSwitch' id="2">
             <text>乐队</text>
         </view>
     </view>
     <view>
-        <view  wx:if="{{detailBand == 1}}" class="detail">
+        <view wx:if="{{detailBand == 1}}" class="detail">
             <text>
-                演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情演出详情
+                {{show.show_message}}
             </text>
         </view>
-        <view wx:else> 
-            <band-grid></band-grid>
+        <view wx:else>
+            <band-grid band-list="{{bandList}}" />
         </view>
     </view>
 </view>
