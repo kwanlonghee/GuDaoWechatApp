@@ -1,6 +1,7 @@
 {
     "pages":[
         "pages/newshows/newshows",
+        "pages/search/search",
         "pages/hotbands/hotbands",
         "pages/band-detail/band-detail",
         "pages/show-detail/show-detail",

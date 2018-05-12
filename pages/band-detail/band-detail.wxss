@@ -1,5 +1,3 @@
-@import "../../templates/band-grid/band-grid-template.wxss";
-@import "../../templates/day-shows/day-shows-template.wxss";
 
 page {
     height: 100%;

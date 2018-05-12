@@ -1,0 +1,16 @@
+<view class="tabContainer">
+    <view class="tab {{(showBand == 1)?'on':''}}" bindtap='showBandSwitch' id="1">
+        <text>演出</text>
+    </view>
+    <view class="tab {{(showBand == 2)?'on':''}}" bindtap='showBandSwitch' id="2">
+        <text>图片</text>
+    </view>
+</view>
+<view>
+    <view hidden="{{showBand == 2}}">
+        <day-show />
+    </view>
+    <view hidden="{{showBand == 1}}">
+        <band-grid />
+    </view>
+</view>

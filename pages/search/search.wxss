@@ -1,0 +1,15 @@
+.tabContainer{
+    color:#ffd700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2rpx solid #222;
+}
+.tab{
+    height:60rpx;
+    width:180rpx;
+    text-align: center;
+}
+.on{
+    border-bottom: 1px solid #fdd700;
+}
