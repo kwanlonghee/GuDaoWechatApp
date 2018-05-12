@@ -1,0 +1,12 @@
+<import src="../horizon-show/horizon-show-template.wxml" />
+<template name="day-shows-template">
+    <view class="day-show-container">
+        <view class="date">
+            <view class="line left"></view>
+            <text class="datetime">4月5日</text>
+            <view class="line right"></view>
+        </view>
+        <template is="horizen-show-template" />
+        <template is="horizen-show-template" />
+    </view>
+</template>

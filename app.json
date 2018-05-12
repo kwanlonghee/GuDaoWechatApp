@@ -1,0 +1,43 @@
+{
+    "pages":[
+        "pages/hotbands/hotbands",
+        "pages/band-detail/band-detail",
+        "pages/show-detail/show-detail",
+        "pages/newshows/newshows",
+        "pages/mine/mine",
+        "pages/comments/comments"
+    ],
+    "tabBar": {
+        "borderStyle": "white",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/newshows/newshows",
+                "text": "最新演出",
+                "iconPath": "",
+                "selectedIconPath": "",
+                "selectedColor":""
+            },
+            {
+                "pagePath": "pages/hotbands/hotbands",
+                "text": "热门乐队",
+                "iconPath": "",
+                "selectedIconPath": "",
+                "selectedColor": ""
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "",
+                "selectedIconPath": "",
+                "selectedColor": ""
+            }
+        ]
+    },
+    "window":{
+        "navigationBarBackgroundColor":"#ffd700",
+        "navigationBarTextStyle":"black"
+
+    }
+}
+

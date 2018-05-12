@@ -1,0 +1,55 @@
+@import "../../templates/band-grid/band-grid-template.wxss";
+@import "../../templates/day-shows/day-shows-template.wxss";
+page {
+    height: 100%;
+    background-color: #0d0d0d; 
+}
+
+.user-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color:#f2f2f2;
+    background-color: #0d0d0d;
+    padding-bottom: 20rpx;
+    border-bottom: 3px solid #333;
+}
+.user-img image{
+    height:150rpx;
+    width:150rpx;
+    border: 1px solid #333;
+    border-radius: 150rpx;
+}
+.user-img{
+    margin-top: 20rpx;
+}
+.user-name{
+    color:#ffd700;
+}
+.user-sex-age{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20rpx;
+}
+.user-intro{
+    margin-top: 20rpx;
+    width:80%;
+    text-align: center;
+}
+.tabContainer{
+    color:#ffd700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tab{
+    height:60rpx;
+    width:180rpx;
+    text-align: center;
+}
+.on{
+    border-bottom: 1px solid #fdd700;
+}

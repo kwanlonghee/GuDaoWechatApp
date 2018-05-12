@@ -1,0 +1,6 @@
+<view>
+    <search-bar></search-bar>
+</view>
+<view>
+    <band-grid band-list="{{bandList}}"></band-grid>
+</view>

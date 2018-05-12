@@ -1,0 +1,14 @@
+.img-container{
+    margin: 10rpx auto;
+    width:740rpx;
+}
+.single-img{
+    float: left;
+}
+.single-img image{
+    height:326rpx;
+    width:326rpx;
+    padding:10rpx;
+    border:2rpx solid #666;
+    margin:10rpx;
+}

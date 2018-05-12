@@ -1,0 +1,8 @@
+<view class="band-container" bindtap='toBandDetail' id="{{band.band_id}}">
+    <image class="band-img" wx:if="{{band.band_cover}}" src="http://localhost/GuDao/Public/img/band/{{band.band_id}}/cover.jpg"></image>
+    <image class="band-img" wx:else src="/images/band-default.jpg"></image>
+    <view class="band-bottom">
+        <text class="band-name">{{band.band_name}}</text>
+        <text class="band-likes">有<text class="highlight">{{band.support}}</text>人支持</text>
+    </view>
+</view>

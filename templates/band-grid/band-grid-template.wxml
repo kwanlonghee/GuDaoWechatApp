@@ -1,0 +1,32 @@
+<import src="/templates/band/band-template.wxml" />
+<template name="band-grid-template">
+    <view class="band-grid-container">
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+        <view class="single-band">
+            <template is="band-template" />
+        </view>
+    </view>
+</template>

@@ -1,0 +1,28 @@
+<import src="/templates/band-grid/band-grid-template.wxml" />
+<import src="/templates/day-shows/day-shows-template.wxml" />
+<view class="band-info">
+    <image wx:if="{{band.band_cover}}" class="band-img" src="http://localhost/GuDao/Public/img/band/{{band.band_id}}/cover.jpg"></image>
+    <image wx:else class="band-img" src="/images/band-default.jpg"></image>
+    <text class="band-title">{{band.band_name}}</text>
+    <view class="intro-container">
+        <text class="band-intro">{{band.band_intro}}</text>
+    </view>
+</view>
+<view class="bottom">
+    <view class="tabContainer">
+        <view class="tab {{(showPhoto == 1)?'on':''}}" bindtap='showPhotoSwitch' id="1">
+            <text>演出</text>
+        </view>
+        <view class="tab {{(showPhoto == 2)?'on':''}}" bindtap='showPhotoSwitch' id="2">
+            <text>图片</text>
+        </view>
+    </view>
+    <view>
+        <view  hidden="{{showPhoto == 2}}">
+            <day-show show-list='{{showList}}'></day-show>
+        </view>
+        <view hidden="{{showPhoto == 1}}"> 
+            <pictures band-id="{{band.band_id}}" img-list="{{pictures}}"/>
+        </view>
+    </view>
+</view>

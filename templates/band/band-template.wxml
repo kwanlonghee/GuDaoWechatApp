@@ -1,0 +1,9 @@
+<template name="band-template">
+    <view class="band-container" bindtap=''>
+        <image class="band-img" src="/images/band-default.jpg"></image>
+        <view class="band-bottom">
+            <text class="band-name">乐队名称</text>
+            <text class="band-likes">有<text class="highlight">2333</text>人支持</text>
+        </view>
+    </view>
+</template>

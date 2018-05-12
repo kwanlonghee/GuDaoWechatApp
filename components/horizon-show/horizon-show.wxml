@@ -1,0 +1,15 @@
+<!--components/horizon-show/horizon-show.wxml-->
+<view class="horizon-container" bindtap='toShowDetail' id="{{show.show_id}}">
+    <view class="horizon-left">
+        <image class="horizon-show-img" src="http://localhost/GuDao/Public/img/show/{{show.show_poster}}"></image>
+    </view>
+    <view class="horizon-right">
+        <text class="show-name">{{show.show_name}}</text>
+        <text class="show-bands">
+            <block wx:for="{{show.band}}" wx:for-item="band"><text>{{band.band_name}}</text></block>
+        </text>
+        <text class="show-location">{{show.show_address}}</text>
+        <text class="show-time">{{show.show_time}}</text>
+        <text class="show-likes"><text class="highlight">{{show.want}}</text>人想看</text>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+<view class="user-info-container">
+    <view class="user-img">
+        <image src="/images/user-default.jpg"></image>
+    </view>
+
+        <text class="user-name">用户昵称</text>
+        <view class="user-sex-age">
+            <text class="user-sex">男</text>
+            <text class="uesr-age">18</text>
+        </view>
+        <view class="user-intro">
+            <text>用户简介用户简介用户简介用户简介用户简介用户简介用户简介用户简介</text>
+        </view>
+        <band></band>
+
+</view>
+
+
+<view class="bottom">
+    <view class="tabContainer">
+        <view class="tab {{(bandShow == 1) ?'on':''}}" bindtap='bandShowSwitch' id="1">
+            <text>支持的乐队</text>
+        </view>
+        <view class="tab {{(bandShow == 2) ?'on':''}}" bindtap='bandShowSwitch'id="2">
+            <text>想看的演出</text>
+        </view>
+    </view>
+    <view>
+        <view  wx:if="{{bandShow == 1}}">
+            <band-grid></band-grid>
+        </view>
+        <view wx:else> 
+            <day-show></day-show>
+        </view>
+    </view>
+</view>

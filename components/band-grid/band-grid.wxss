@@ -1,0 +1,7 @@
+.band-grid-container{
+    margin: 10rpx auto;
+    width:740rpx;
+}
+.single-band{
+    float: left;
+}

@@ -1,0 +1,6 @@
+<view class="search-bar-bg">
+    <view class="search-bar-container {{searchFocus == true?'on':''}}">
+        <input type="search" placeholder="搜索演出/乐队" placeholder-class="placeholder" bindfocus='onSearchFocus' bindblur='onSearchBlur'></input>
+        <image class="cancel-img" wx:if="{{searchFocus}}" src="/images/xx.png" bindtap='onSearchBlur'></image>
+    </view>
+</view>

@@ -1,0 +1,50 @@
+@import "../../templates/band-grid/band-grid-template.wxss";
+@import "../../templates/day-shows/day-shows-template.wxss";
+
+page {
+    height: 100%;
+    background-color: #0d0d0d; 
+}
+
+.band-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20rpx;
+    border-bottom: 4rpx solid #333;
+}
+
+
+.band-img {
+    height: 710rpx;
+    width: 710rpx;
+}
+
+.band-title {
+    color: #fdd700;
+    font-size: 40rpx;
+}
+
+
+.intro-container {
+    width: 80%;
+    text-align: center;
+    color:#f2f2f2;
+}
+
+.tabContainer{
+    color:#ffd700;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2rpx solid #222;
+}
+.tab{
+    height:60rpx;
+    width:180rpx;
+    text-align: center;
+}
+.on{
+    border-bottom: 1px solid #fdd700;
+}

@@ -1,0 +1,14 @@
+<template name="horizen-show-template">
+    <view class="horizon-container">
+        <view class="horizon-left">
+            <image class="horizon-show-img" src="/images/show-default.jpg"></image>
+        </view>
+        <view class="horizon-right">
+            <text class="show-name">演出名称</text>
+            <text class="show-bands">乐队1乐队2乐队3</text>
+            <text class="show-location">演出地点</text>
+            <text class="show-time">演出时间</text>
+            <text class="show-likes"><text class="highlight">223333</text>人想看</text>
+        </view>
+    </view>
+</template>

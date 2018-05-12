@@ -1,0 +1,10 @@
+<view class="day-show-container">
+    <!-- <view class="date">
+        <view class="line left"></view>
+        <text class="datetime">4月5日</text>
+        <view class="line right"></view>
+    </view> -->
+    <block wx:for="{{showList}}" wx:for-item="show">
+        <horizon-show show="{{show}}"></horizon-show>
+    </block> 
+</view>

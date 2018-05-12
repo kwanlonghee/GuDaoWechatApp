@@ -1,0 +1,29 @@
+
+<view>
+    <search-bar></search-bar>
+</view>
+
+
+<view>
+    <swiper vertical='true' class="note-swiper">
+        <swiper-item>
+        <view class="note-container">
+            <text class="notes-title">预售</text>
+            <text class="notes-content">通知内容通知内容通知内容</text>
+        </view>
+        </swiper-item>
+        <swiper-item>
+        <view class="note-container">
+            <text class="notes-title">预售</text>
+            <text class="notes-content">通知内容通知内容通知内容</text>
+        </view>
+        </swiper-item>
+        <swiper-item>
+        <view class="note-container">
+            <text class="notes-title">预售</text>
+            <text class="notes-content">通知内容通知内容通知内容</text>
+        </view>
+        </swiper-item>
+    </swiper>
+</view>
+<day-show show-list='{{showList}}'></day-show>

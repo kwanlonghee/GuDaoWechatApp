@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "孤岛",
+    "usingComponents":{
+        "band-grid":"/components/band-grid/band-grid",
+        "day-show":"/components/day-show/day-show",
+        "pictures":"/components/pictures/pictures"
+    }
+}

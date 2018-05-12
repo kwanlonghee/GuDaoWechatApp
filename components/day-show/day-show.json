@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+      "horizon-show":"/components/horizon-show/horizon-show"
+  }
+}

@@ -1,0 +1,22 @@
+.day-show-container{
+    background-color: #0d0d0d;
+    margin-top: 4rpx;
+}
+.date{
+    height:50rpx;
+    text-align: center;
+}
+.line{
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ffd700;
+    height: 1px;
+    width: 20%;
+    
+}
+.datetime{
+    display: inline-block;
+    color: #ffd700;
+    line-height: 50rpx;
+    margin: 0 8rpx;
+}

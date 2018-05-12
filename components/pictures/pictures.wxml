@@ -1,0 +1,7 @@
+<view class="img-container">
+    <view class="single-img">
+        <block wx:for="{{imgList}}" wx:for-item="img">
+            <image src="http://localhost/GuDao/Public/img/band/{{bandId}}/{{img}}"></image>
+        </block>
+    </view>
+</view>

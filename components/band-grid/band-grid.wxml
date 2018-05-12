@@ -1,0 +1,8 @@
+<!--components/band-grid/band-grid.wxml-->
+<view class="band-grid-container">
+    <block wx:for="{{bandList}}" wx:for-item="band">
+        <view class="single-band">
+            <band band="{{band}}"></band>
+        </view>
+    </block>
+</view>
