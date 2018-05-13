@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="top">
+        <view class="left">
+            <image src="/images/user-default.jpg"></image>
+        </view>
+        <view class="right">
+            <view class="nameTime">
+                <view class="userName">
+                    <text>用户名</text>
+                </view>
+                <view class="time">
+                    <text>2018/04/17/12:00</text>
+                </view>
+            </view>
+            <view class="content">
+                <text>评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容</text>
+                </view>
+                <view class="reply">
+                    <reply />
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+            <text>回复</text>
+        </view>
+
+    </view>

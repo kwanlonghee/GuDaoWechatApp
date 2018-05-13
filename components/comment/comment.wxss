@@ -1,0 +1,41 @@
+.container{
+    border-bottom: 4rpx solid #333;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+padding:20rpx 20rpx;
+}
+.left image{
+    width:80rpx;
+    height:80rpx;
+    border-radius: 80rpx;
+}
+.right{
+    display:flex;
+    flex-direction: column;
+    margin-right: 20rpx;
+}
+.nameTime{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.userName{
+    color:#ffd700;
+}
+.time{
+    color:#333;
+}
+.content{
+    color:#f2f2f2;
+}
+.bottom{
+    position:relative;
+    left:90%;
+    padding-bottom: 10rpx;
+    color:#ffd700;
+}

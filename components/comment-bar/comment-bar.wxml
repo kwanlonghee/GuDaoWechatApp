@@ -1,0 +1,9 @@
+<view class="com-bar">
+    <view class="wrap">
+        <view class="input">
+            <input placeholder='输入评论内容' type='search'></input>
+        </view>
+        <icon class="comment"></icon>
+        <icon class="like"></icon>
+    </view>
+</view>

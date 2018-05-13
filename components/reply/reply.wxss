@@ -1,0 +1,25 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+.name-time{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.replyer-name,
+.poster-name{
+    color:#fff700;
+}
+.huifu,
+.time{
+    color:#333;
+}
+.content{
+    color:#f2f2f2;
+}
+.huifu{
+    padding: 0 20rpx;
+}

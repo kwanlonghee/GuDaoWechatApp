@@ -3,6 +3,7 @@
     "usingComponents":{
         "band-grid":"/components/band-grid/band-grid",
         "day-show":"/components/day-show/day-show",
-        "pictures":"/components/pictures/pictures"
+        "pictures":"/components/pictures/pictures",
+        "comment-bar":"/components/comment-bar/comment-bar"
     }
 }

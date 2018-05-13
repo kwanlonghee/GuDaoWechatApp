@@ -1,5 +1,4 @@
-@import "../../templates/band-grid/band-grid-template.wxss";
-@import "../../templates/day-shows/day-shows-template.wxss";
+
 page {
     height: 100%;
     background-color: #0d0d0d; 

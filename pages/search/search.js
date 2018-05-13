@@ -6,7 +6,6 @@ Page({
      */
     data: {
         showBand: 1,//切换tab
-        key: "",
         showList: [],
         bandList: [],
         showEmpty: false,
@@ -29,13 +28,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options.key)
         var _this = this;
         // 获取band信息添加到band中
         wx.request({
             url: 'http://localhost/GuDao/Index/searchShow',
             data: {
-                "key": options.key
+                "key[]": options.key
             },
             method: 'GET',
             success: function (res) {
@@ -54,7 +52,7 @@ Page({
         wx.request({
             url: 'http://localhost/GuDao/Index/searchBand',
             data: {
-                "key": options.key
+                "key[]": options.key
             },
             method: 'GET',
             success: function (res) {
