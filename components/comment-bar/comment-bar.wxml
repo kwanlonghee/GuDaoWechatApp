@@ -1,9 +1,9 @@
 <view class="com-bar">
     <view class="wrap">
         <view class="input">
-            <input placeholder='输入评论内容' type='search'></input>
+            <input placeholder='输入评论内容' type='search' ></input>
         </view>
-        <icon class="comment"></icon>
-        <icon class="like"></icon>
+        <image class="comment" src="/icons/comments.png" bindtap='toComment' data-type="{{type}}"></image>
+        <image class="like" src="/icons/like.png"></image>
     </view>
 </view>

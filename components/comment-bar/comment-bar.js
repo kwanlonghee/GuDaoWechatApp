@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    "type":String,
+    "_id": Number
   },
 
   /**
@@ -18,6 +19,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+      toComment:function(){
+        console.log(this.data.id);
+        wx.navigateTo({
+            url: '/pages/comments/comments?type=' + this.data.type + "&id=" + this.data._id,
+        })
+      }
   }
 })

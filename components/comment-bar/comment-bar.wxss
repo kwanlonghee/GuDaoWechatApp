@@ -19,18 +19,27 @@
     margin-left: 10rpx;
 }
 
-.input input {
-    margin-left: 40rpx;
+.input input,
+.input,
+.comment,
+.like{
     position: relative;
     transform: translateY(-50%);
     top:50%;
 }
-.comment,
+.input input {
+    margin-left: 40rpx;
+    font-size: 24rpx;
+    color:f2f2f2;
+}
+
+.comment{
+    width:50rpx;
+    height:50rpx;
+    margin:0 20rpx;
+}
 .like{
     width:40rpx;
     height:40rpx;
     margin:0 20rpx;
-    position: relative;
-    transform: translateY(-50%);
-    top:50%;
 }

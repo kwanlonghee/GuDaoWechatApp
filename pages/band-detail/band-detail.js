@@ -28,7 +28,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options.id)
+        console.log(options.id);
+        this.setData({
+            id : options.id
+        })
         var _this = this;
         // 获取band信息添加到band中
         wx.request({
