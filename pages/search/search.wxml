@@ -3,14 +3,16 @@
         <text>演出</text>
     </view>
     <view class="tab {{(showBand == 2)?'on':''}}" bindtap='showBandSwitch' id="2">
-        <text>图片</text>
+        <text>乐队</text>
     </view>
 </view>
 <view>
     <view hidden="{{showBand == 2}}">
-        <day-show />
+        <view wx:if="{{showEmpty}}" class="empty"><text>没有找到演出</text></view>
+        <day-show show-list="{{showList}}" />
     </view>
     <view hidden="{{showBand == 1}}">
-        <band-grid />
+        <view wx:if="{{bandEmpty}}" class="empty"><text>没有找到乐队</text></view>
+        <band-grid band-list="{{bandList}}" />
     </view>
 </view>

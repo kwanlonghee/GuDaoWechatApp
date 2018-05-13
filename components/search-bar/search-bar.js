@@ -11,7 +11,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-      searchFocus: false
+      searchFocus: false,
+      inputValue:''
   },
 
   /**
@@ -22,8 +23,17 @@ Component({
           console.log("111")
           this.setData({ searchFocus: true });
       },
-      onSearchBlur: function () {
-          this.setData({ searchFocus: false });
+      onSearchBlur: function (e) {
+          this.setData({ 
+              searchFocus: false,
+              inputValue:''
+           });
+          
+      },
+      onSearch:function(e){
+          wx.navigateTo({
+              url: '/pages/search/search?key=' + e.detail.value
+          })
       }
   }
 })

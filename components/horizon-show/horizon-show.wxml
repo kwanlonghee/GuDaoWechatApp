@@ -10,6 +10,6 @@
         </text>
         <text class="show-location">{{show.show_address}}</text>
         <text class="show-time">{{show.show_time}}</text>
-        <text class="show-likes"><text class="highlight">{{show.want}}</text>人想看</text>
+        <text class="show-likes" wx:if="{{show.want}}"><text class="highlight">{{show.want}}</text>人想看</text>
     </view>
 </view>
