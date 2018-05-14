@@ -1,29 +1,20 @@
-
 <view>
     <search-bar></search-bar>
 </view>
 
 
 <view>
-    <swiper vertical='true' class="note-swiper">
-        <swiper-item>
-        <view class="note-container">
-            <text class="notes-title">预售</text>
-            <text class="notes-content">通知内容通知内容通知内容</text>
-        </view>
-        </swiper-item>
-        <swiper-item>
-        <view class="note-container">
-            <text class="notes-title">预售</text>
-            <text class="notes-content">通知内容通知内容通知内容</text>
-        </view>
-        </swiper-item>
-        <swiper-item>
-        <view class="note-container">
-            <text class="notes-title">预售</text>
-            <text class="notes-content">通知内容通知内容通知内容</text>
-        </view>
-        </swiper-item>
+    <swiper vertical='true' class="note-swiper" autoplay="true" >
+        <block wx:for="{{noticeList}}" wx:for-item="notice">
+            <swiper-item>
+                <view class="note-container">
+                    <text class="notes-title" wx:if="{{notice.notice_type == 1}}">预售</text>
+                    <text class="notes-title" wx:if="{{notice.notice_type == 2}}">取消</text>
+                    <text class="notes-title" wx:if="{{notice.notice_type == 3}}">变更</text>
+                    <text class="notes-content">{{notice.notice_content}}</text>
+                </view>
+            </swiper-item>
+        </block>
     </swiper>
 </view>
 <day-show show-list='{{showList}}'></day-show>

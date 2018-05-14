@@ -23,8 +23,6 @@ Component({
               url: '/pages/show-detail/show-detail?id=' + e.currentTarget.id
           })
       },
-      showshow:function(){
-        console.log(this.data.show)
-      }
+
   }
 })

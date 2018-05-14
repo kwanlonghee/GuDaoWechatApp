@@ -1,7 +1,7 @@
 <view class="com-bar">
     <view class="wrap">
         <view class="input">
-            <input placeholder='输入评论内容' type='search' ></input>
+            <input placeholder='添加评论' bindconfirm='addConfirm' value="{{inputValue}}" bindblur='inputBlur'></input>
         </view>
         <image class="comment" src="/icons/comments.png" bindtap='toComment' data-type="{{type}}"></image>
         <image class="like" src="/icons/like.png"></image>

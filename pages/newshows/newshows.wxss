@@ -18,6 +18,7 @@ page{
     font-size: 40rpx;
     color: #ffd700;
     margin: 0 20rpx; 
+    width:100rpx;
 }
 .notes-content{
     color:#999;

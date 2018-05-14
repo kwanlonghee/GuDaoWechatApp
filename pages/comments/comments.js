@@ -1,4 +1,5 @@
-const app = getApp();// pages/comments/comments.js
+const app = getApp();
+// pages/comments/comments.js
 Page({
 
     /**
@@ -48,13 +49,40 @@ Page({
 
 
     onReply: function (e) {
-        console.log(e.detail);
+        console.log(e);
         this.setData({
-            replyFlag: true
+            replyFlag: true,
+            comment_id : e.detail.comment_id
         })
     },
     replyConfirm: function (e) {
-        console.log(e.detail.value);
+        var time = new Date();
+        var content = e.detail.value;
+        var target;
+        if (this.data.type == "Show") { target = 1 }
+        else { target = 2 }
+        var _this = this;
+        time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        wx.request({
+            url: 'http://localhost/GuDao/' + this.data.type + '/replyComment',
+            method: 'POST',
+            header: {
+                'content-type': "application/x-www-form-urlencoded"
+            },
+            data: {
+                "comment_id": this.data.comment_id,
+                "content": content,
+                "time": time,
+                "user_id": app.globalData.user_id,
+                "target_id": this.data.id
+            },
+            success: function (res) {
+                _this.getComment(_this.data.type, _this.data.id);
+                _this.setData({
+                    inputValue: ""
+                })
+            }
+        })
 
     },
     addConfirm:function(e){
