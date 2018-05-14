@@ -1,6 +1,7 @@
 {
     "navigationBarTitleText": "孤岛",
     "usingComponents":{
-        "band-grid":"/components/band-grid/band-grid"
+        "band-grid":"/components/band-grid/band-grid",
+        "comment-bar":"/components/comment-bar/comment-bar"
     }
 }

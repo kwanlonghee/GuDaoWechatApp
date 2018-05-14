@@ -1,8 +1,8 @@
 {
     "pages":[
         "pages/newshows/newshows",
-        "pages/band-detail/band-detail",
         "pages/comments/comments",
+        "pages/band-detail/band-detail",
         "pages/search/search",
         "pages/hotbands/hotbands",
         "pages/show-detail/show-detail",

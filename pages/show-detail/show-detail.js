@@ -27,6 +27,9 @@ Page({
      */
     onLoad: function (options) {
         console.log(options.id)
+        this.setData({
+            id : options.id
+        })
         var _this = this;
         // 获取show信息添加到show中
         wx.request({

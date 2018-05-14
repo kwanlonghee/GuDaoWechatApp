@@ -1,15 +1,15 @@
 <view class="container">
     <view class="name-time">
         <view class="names">
-            <text class="replyer-name">回复者</text>
+            <text class="replyer-name">{{reply.user.username}}</text>
             <text class="huifu">回复</text>
-            <text class="poster-name">发帖人</text>
+            <text class="poster-name">{{reply.target.username}}</text>
         </view>
         <view class="time">
-            <text>2018/04/15/12:00</text>
+            <text>{{reply.reply_time}}</text>
         </view>
     </view>
     <view class="content">
-        <text>回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容</text>
+        <text>{{reply.reply_content}}</text>
     </view>
 </view>

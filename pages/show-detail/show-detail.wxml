@@ -38,3 +38,5 @@
         </view>
     </view>
 </view>
+
+<comment-bar type="Show" _id="{{id}}"/>

@@ -24,4 +24,4 @@
         </view>
     </view>
 </view>
-<comment-bar type="band" _id="{{id}}"/>
+<comment-bar type="Band" _id="{{id}}"/>

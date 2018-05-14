@@ -20,7 +20,6 @@ Component({
    */
   methods: {
       toComment:function(){
-        console.log(this.data.id);
         wx.navigateTo({
             url: '/pages/comments/comments?type=' + this.data.type + "&id=" + this.data._id,
         })

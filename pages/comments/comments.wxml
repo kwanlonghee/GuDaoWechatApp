@@ -1,3 +1,11 @@
 <view class="comments-container">
-    <comment />
+    <block wx:for="{{coms}}" wx:for-item="com">
+        <comment com="{{com}}" bind:onReply = "onReply"/>
+    </block>
+</view>
+<view class="buttom">
+<view class="wrap">
+    <input class="reply" placeholder='回复评论' hidden='{{!replyFlag}}' focus='{{replyflag}}' bindconfirm='replyConfirm' bindblur='inputBlur' value="{{inputValue}}"></input>
+    <input class="comment" placeholder='添加评论' bindconfirm='addConfirm' value="{{inputValue}}" bindblur='inputBlur'></input>
+</view>
 </view>

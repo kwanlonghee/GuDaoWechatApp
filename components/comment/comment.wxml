@@ -6,21 +6,23 @@
         <view class="right">
             <view class="nameTime">
                 <view class="userName">
-                    <text>用户名</text>
+                    <text>{{com.user.username}}</text>
                 </view>
                 <view class="time">
-                    <text>2018/04/17/12:00</text>
+                    <text>{{com.comment_time}}</text>
                 </view>
             </view>
             <view class="content">
-                <text>评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容</text>
+                <text>{{com.comment_content}}</text>
                 </view>
                 <view class="reply">
-                    <reply />
+                    <block wx:for="{{com.reply}}" wx:for-item="reply">
+                        <reply reply="{{reply}}"/>
+                    </block>
                 </view>
             </view>
         </view>
-        <view class="bottom">
+        <view class="bottom" bindtap='onReply'>
             <text>回复</text>
         </view>
 
