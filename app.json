@@ -1,12 +1,15 @@
 {
     "pages":[
+        "pages/register/register",
+        "pages/login/login",
+        "pages/mine/mine",
         "pages/newshows/newshows",
         "pages/comments/comments",
         "pages/band-detail/band-detail",
         "pages/search/search",
         "pages/hotbands/hotbands",
-        "pages/show-detail/show-detail",
-        "pages/mine/mine"
+        "pages/show-detail/show-detail"
+
     ],
     "tabBar": {
         "borderStyle": "white",

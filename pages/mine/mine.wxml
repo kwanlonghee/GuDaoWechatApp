@@ -1,4 +1,4 @@
-<view class="user-info-container">
+<view class="user-info-container" wx:if = "{{login_flag}}">
     <view class="user-img">
         <image src="/images/user-default.jpg"></image>
     </view>
@@ -15,8 +15,7 @@
 
 </view>
 
-
-<view class="bottom">
+<view class="bottom" wx:if = "{{login_flag}}">
     <view class="tabContainer">
         <view class="tab {{(bandShow == 1) ?'on':''}}" bindtap='bandShowSwitch' id="1">
             <text>支持的乐队</text>
@@ -33,4 +32,10 @@
             <day-show></day-show>
         </view>
     </view>
+</view>
+
+<view class="unLogin" wx:if = "{{!login_flag}}">
+    <image src="/images/user-default.jpg"></image>
+    <button class="btn">登录</button>
+    <button class="btn">注册</button>
 </view>
