@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
 
 
@@ -29,20 +30,46 @@ Page({
                 })
             }
         }, 1000);
+        wx.request({
+            url: 'http://localhost/GuDao/Index/sendCode',
+            data: {
+                email:_this.data.email
+            },
+            header: { 'content-type': 'application/x-www-form-urlencoded' },
+            method: 'POST',
+            success: function (res) {
+                console.log("sendCode seccess")
+            }
+        })
     },
     doRegister:function(e){
-        console.log(e)
-        // wx.request({
-        //     url: 'http://localhost/GuDao/Index/doRegister',
-        //     data: '',
-        //     header: {},
-        //     method: 'GET',
-        //     dataType: 'json',
-        //     responseType: 'text',
-        //     success: function(res) {},
-        //     fail: function(res) {},
-        //     complete: function(res) {},
-        // })
+        console.log(e);
+        let email = e.detail.value.mail;
+        let code = e.detail.value.code;
+        let password= e.detail.value.password;
+        wx.request({
+            url: 'http://localhost/GuDao/Index/doRegister',
+            data: {
+                email:email,
+                code:code,
+                password:password
+            },
+            header: {'content-type': 'application/x-www-form-urlencoded'},
+            method: 'POST',
+            success: function(res) {
+                var wxSession = res.data.session_id;
+                wx.setStorageSync('PHPSESSID', wxSession);
+                app.globalData.login_flag = true;
+                wx.switchTab({
+                    url: '/pages/mine/mine'
+                })
+            }
+        })
+    },
+    mailInput:function(e){
+        this.setData({
+            email : e.detail.value
+        })
     }
 
 })

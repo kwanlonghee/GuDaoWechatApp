@@ -2,11 +2,11 @@
     <view class="container">
         <view class="inputs">
             <view class="input mail">
-                <input class="mailInput" placeholder='邮箱' placeholder-class='pholder' name="mail"></input>
-                <button class="codeBtn" bindtap='onCode' disabled='{{!codeBtnFlag}}'>{{countDown}}</button>
+                <input placeholder='邮箱' placeholder-class='pholder' name="mail" bindinput='mailInput'></input>
             </view>
             <view class="input code">
-                <input placeholder='验证码' placeholder-class='pholder' name="code"></input>
+                <input placeholder='验证码' placeholder-class='pholder' name="code" class="codeInput"></input>
+                <button class="codeBtn" bindtap='onCode' disabled='{{!codeBtnFlag}}'>{{countDown}}</button>
             </view>
             <view class="input pwd">
                 <input placeholder='密码' placeholder-class='pholder' name="pwd" password></input>

@@ -45,6 +45,11 @@ Page({
             url: '/pages/login/login',
         })
     },
+    toRegister:function(){
+        wx.navigateTo({
+            url: '/pages/register/register',
+        })
+    },
 
     bandShowSwitch: function (e) {
         console.log(e);

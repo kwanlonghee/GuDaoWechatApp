@@ -39,5 +39,5 @@
 <view class="unLogin" wx:if = "{{!login_flag}}">
     <image src="/images/user-default.jpg"></image>
     <button class="btn" bindtap='toLogin'>登录</button>
-    <button class="btn">注册</button>
+    <button class="btn" bindtap="toRegister">注册</button>
 </view>

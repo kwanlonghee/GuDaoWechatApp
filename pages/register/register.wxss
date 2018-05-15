@@ -37,13 +37,13 @@ input, .codeBtn {
     color: #333;
 }
 
-.input.mail {
+.input.code {
     display: flex;
     flex-direction: row;
 }
 
-.mailInput {
-    width: 60%;
+.codeInput {
+    width:60%;
 }
 
 .codeBtn {
