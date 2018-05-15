@@ -27,6 +27,7 @@ input{
     transform: translateY(-50%);
     top:50%;
     position: relative;
+    color:#f2f2f2;
 }
 .pholder{
     color:#333;

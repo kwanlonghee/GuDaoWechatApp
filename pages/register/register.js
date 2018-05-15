@@ -1,66 +1,48 @@
-// pages/register/register.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    data: {
+        countDown: "获取验证码",
+        codeBtnFlag: true
+    },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    onLoad: function (options) {
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+    },
+    onCode: function () {
+        this.setData({
+            countDown: 20,
+            codeBtnFlag: false
+        })
+        var _this = this;
+        var int = setInterval(function () {
+            if (_this.data.countDown == 1) {
+                clearInterval(int);
+                _this.setData({
+                    countDown: "获取验证码",
+                    codeBtnFlag: true
+                })
+            }
+            else {
+                _this.setData({
+                    countDown: _this.data.countDown-1
+                })
+            }
+        }, 1000);
+    },
+    doRegister:function(e){
+        console.log(e)
+        // wx.request({
+        //     url: 'http://localhost/GuDao/Index/doRegister',
+        //     data: '',
+        //     header: {},
+        //     method: 'GET',
+        //     dataType: 'json',
+        //     responseType: 'text',
+        //     success: function(res) {},
+        //     fail: function(res) {},
+        //     complete: function(res) {},
+        // })
+    }
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

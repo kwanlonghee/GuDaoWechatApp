@@ -1,66 +1,41 @@
 // pages/login/login.js
+const md5 = require("../../utils/md5.js");
+const app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    },
+    doLogin: function (e) {
+        wx.request({
+            url: 'http://localhost/GuDao/Index/doLogin',
+            method: 'POST',
+            header: {
+                'content-type': "application/x-www-form-urlencoded"
+            },
+            data: {
+                "email": e.detail.value.mail,
+                "password": md5.md5(e.detail.value.pwd)
+            },
+            success: function (res) {
+                console.log(res);
+                var wxSession = res.data.session_id;
+                wx.setStorageSync('PHPSESSID', wxSession);
+                app.globalData.login_flag = true;
+                wx.switchTab({
+                    url: '/pages/mine/mine'
+                })
+            }
+        })
+    }
 })
