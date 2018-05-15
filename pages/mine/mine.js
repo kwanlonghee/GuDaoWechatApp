@@ -6,7 +6,9 @@ Page({
      */
     data: {
         bandShow: 1,
-        userInfo:[]
+        userInfo:[],
+        bands:[],
+        shows:[]
     },
     onLoad: function (options) {
         console.log(app.globalData.login_flag);
@@ -18,6 +20,7 @@ Page({
     onShow: function () {
         if (app.globalData.login_flag) {
             this.checkLogin();
+            this.getUserActivity();
         }
     },
     checkLogin: function () {
@@ -37,6 +40,33 @@ Page({
                     userInfo: res.data.data
                 })
 
+            }
+        })
+    },
+    getUserActivity:function(){
+        var _this = this;
+        wx.request({
+            url: 'http://localhost/GuDao/User/getUserActivity',
+            data:{
+                "id": app.globalData.user_id
+            },
+            success:function(res){
+                console.log(res)
+                var act = res.data.data.activity;
+                console.log(act)
+                var bands=[];
+                var shows=[];
+                for(let i = 0; i < act.length ;i++){
+                    if (act[i]["type"] == "show") {
+                        shows.push(act[i]["show"]);
+                    } else {
+                        bands.push(act[i]["band"]);
+                    }
+                }
+                _this.setData({
+                    bands:bands,
+                    shows:shows
+                })
             }
         })
     },

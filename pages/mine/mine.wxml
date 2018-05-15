@@ -28,10 +28,10 @@
     </view>
     <view>
         <view  wx:if="{{bandShow == 1}}">
-            <band-grid></band-grid>
+            <band-grid band-list="{{bands}}"></band-grid>
         </view>
         <view wx:else> 
-            <day-show></day-show>
+            <day-show show-list="{{shows}}"></day-show>
         </view>
     </view>
 </view>
