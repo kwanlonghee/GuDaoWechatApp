@@ -4,6 +4,7 @@
             <input placeholder='添加评论' bindconfirm='addConfirm' value="{{inputValue}}" bindblur='inputBlur'></input>
         </view>
         <image class="comment" src="/icons/comments.png" bindtap='toComment' data-type="{{type}}"></image>
-        <image class="like" src="/icons/like.png"></image>
+        <image class="like" wx:if="{{support}}" src="/icons/like-on.png" bindtap='cancel'></image>
+        <image class="like" wx:else src="/icons/like.png" bindtap="like"></image>
     </view>
 </view>

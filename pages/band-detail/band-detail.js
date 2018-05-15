@@ -1,4 +1,4 @@
-// pages/band-detail/band-detail.js
+const app = getApp();
 Page({
 
     /**
@@ -8,7 +8,8 @@ Page({
         showPhoto: 1,//切换tab
         band: [],//通过ajax获取band信息
         showList: [],//band参与过的演出
-        pictures:[]//band的图片
+        pictures: [],//band的图片
+        support: false
     },
     // tab的切换事件
     showPhotoSwitch: function (e) {
@@ -30,7 +31,7 @@ Page({
     onLoad: function (options) {
         console.log(options.id);
         this.setData({
-            id : options.id
+            id: options.id
         })
         var _this = this;
         // 获取band信息添加到band中
@@ -74,55 +75,65 @@ Page({
                     pictures: res.data.data
                 })
             }
-        })
+        });
+        // 获取是否支持
+        wx.request({
+            url: 'http://localhost/GuDao/Band/checkSupport',
+            data: {
+                "user_id": app.globalData.user_id,
+                "id": options.id
+            },
+            method: 'GET',
+            success: function (res) {
+                console.log(res)
+                if (res.data.code == 200) {
+                    _this.setData({
+                        support: true
+                    })
+                }
+            }
+        });
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    cancel: function () {
+        var _this = this;
+        wx.request({
+            url: 'http://localhost/GuDao/Band/deleteSupport',
+            data: {
+                "user_id": app.globalData.user_id,
+                "band_id": this.data.band.band_id,
+            },
+            header: {
+                'content-type': "application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            success: function (res) {
+                _this.setData({
+                    support: false
+                })
+            }
+        });
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    like: function () {
+        var _this = this;
+        var time = new Date();
+        time = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate();
+        wx.request({
+            url: 'http://localhost/GuDao/Band/addSupport',
+            data: {
+                "user_id": app.globalData.user_id,
+                "band_id": this.data.band.band_id,
+                "time": time
+            },
+            header: {
+                'content-type': "application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            success: function (res) {
+                _this.setData({
+                    support: true
+                })
+            }
+        });
     }
+
 })
