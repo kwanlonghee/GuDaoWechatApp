@@ -78,3 +78,7 @@ page {
     width:70%;
     margin-bottom:60rpx;
 }
+.editInfo{
+    margin-top: 20rpx;
+    color:#ffd700
+}

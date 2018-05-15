@@ -1,0 +1,24 @@
+<form bindsubmit="editInfo">
+    <view class="container">
+        <view class="inputs">
+            <view class="input name">
+                <input placeholder='昵称' placeholder-class='pholder' name="name" value="{{userInfo.username}}"></input>
+            </view>
+            <view class="input gender">
+                <radio-group bindchange="genderChange">
+                    <radio value='M' checked="{{userInfo.gender == 'M'}}">男</radio>
+                    <radio value='F' checked="{{userInfo.gender == 'F'}}">女</radio>
+                </radio-group>
+            </view>
+            <view class="input">
+                <picker mode="date" start="1950-01-01" end="2020-12-31" bindchange="dateChange">
+                <text class="date">{{birthday}}</text>
+                </picker>
+            </view>
+            <view class="input intro">
+                <input placeholder='简介' placeholder-class='pholder' name="intro" value="{{userInfo.intro}}"></input>
+            </view>
+        </view>
+        <button formType="submit">完成</button>
+    </view>
+</form>

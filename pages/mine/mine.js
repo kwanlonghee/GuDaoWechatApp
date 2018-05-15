@@ -8,7 +8,8 @@ Page({
         bandShow: 1,
         userInfo:[],
         bands:[],
-        shows:[]
+        shows:[],
+        age:""
     },
     onLoad: function (options) {
         console.log(app.globalData.login_flag);
@@ -20,7 +21,7 @@ Page({
     onShow: function () {
         if (app.globalData.login_flag) {
             this.checkLogin();
-            this.getUserActivity();
+
         }
     },
     checkLogin: function () {
@@ -34,12 +35,17 @@ Page({
             success: function (res) {
                 console.log(res);
                 app.globalData.user_id = res.data.data.user_id;
+                let age = new Date().getFullYear() - res.data.data.birthday.split("-")[0];
+                console.log(age);
+                console.log(new Date().getFullYear());
+                console.log(res.data.data.birthday.split("-")[0]);
                 _this.setData({
                     user_id: app.globalData.user_id,
                     login_flag: app.globalData.login_flag,
-                    userInfo: res.data.data
+                    userInfo: res.data.data,
+                    age: age
                 })
-
+                _this.getUserActivity();
             }
         })
     },
@@ -78,6 +84,11 @@ Page({
     toRegister:function(){
         wx.navigateTo({
             url: '/pages/register/register',
+        })
+    },
+    editInfo:function(){
+        wx.navigateTo({
+            url: '/pages/userinfo/userinfo',
         })
     },
 
