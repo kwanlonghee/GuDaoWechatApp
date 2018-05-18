@@ -94,6 +94,7 @@ Page({
             }
         });
     },
+    //取消支持
     cancel: function () {
         var _this = this;
         wx.request({
@@ -113,6 +114,7 @@ Page({
             }
         });
     },
+    //新增支持
     like: function () {
         var _this = this;
         var time = new Date();
