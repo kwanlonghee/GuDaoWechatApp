@@ -1,6 +1,7 @@
 {
     "pages":[
         "pages/mine/mine",
+        "pages/password/password",
         "pages/userinfo/userinfo",
         "pages/register/register",
         "pages/login/login",
@@ -10,6 +11,7 @@
         "pages/search/search",
         "pages/hotbands/hotbands",
         "pages/show-detail/show-detail"
+
 
     ],
     "tabBar": {

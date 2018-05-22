@@ -54,5 +54,10 @@ Page({
                 duration: 2000
             })
         }
+    },
+    onForget: function () {
+        wx.navigateTo({
+            url: '/pages/password/password',
+        })
     }
 })

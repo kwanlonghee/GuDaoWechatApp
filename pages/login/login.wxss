@@ -43,3 +43,7 @@ button{
     width:70%;
     margin-bottom:60rpx;
 }
+.forget{
+    color:#f2f2f2;
+    margin-left: 50%;
+}

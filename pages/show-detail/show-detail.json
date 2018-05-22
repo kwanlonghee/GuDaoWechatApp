@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "孤岛",
+    "navigationBarTitleText": "乐队详细",
     "usingComponents":{
         "band-grid":"/components/band-grid/band-grid",
         "comment-bar":"/components/comment-bar/comment-bar"

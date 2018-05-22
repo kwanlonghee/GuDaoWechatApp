@@ -91,6 +91,11 @@ Page({
             url: '/pages/userinfo/userinfo',
         })
     },
+    resetPwd:function(){
+        wx.navigateTo({
+            url: '/pages/password/password',
+        })
+    },
 
     bandShowSwitch: function (e) {
         console.log(e);
