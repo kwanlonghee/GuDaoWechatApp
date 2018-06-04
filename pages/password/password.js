@@ -1,14 +1,10 @@
 const app = getApp();
 Page({
-
-
     data: {
         countDown: "获取验证码",
         codeBtnFlag: true
     },
-
     onLoad: function (options) {
-
     },
     onCode: function () {
         let reg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;

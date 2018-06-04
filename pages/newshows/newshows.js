@@ -1,10 +1,8 @@
 Page({
-
     data: {
         showList: [],
         noticeList:[]
     },
-
     onLoad: function (options) {
         var _this = this;
         wx.request({

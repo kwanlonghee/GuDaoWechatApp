@@ -1,12 +1,10 @@
 const app = getApp();
 Page({
-
   data: {
         gender:"",
         birthday:"",
         userInfo:[]
   },
-
   onShow: function (options) {
       this.checkLogin()
   },

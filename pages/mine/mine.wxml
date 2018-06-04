@@ -17,7 +17,7 @@
         <text>修改用户信息</text>
     </view>
     <view bindtap='resetPwd' class="editInfo">
-        <text>修改用户信息</text>
+        <text>修改用户密码</text>
     </view>
     <band></band>
 

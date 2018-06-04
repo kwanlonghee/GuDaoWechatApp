@@ -1,17 +1,13 @@
 const md5 = require("../../utils/md5.js");
 const app = getApp();
 Page({
-
     data: {
-
     },
     onLoad: function (options) {
-
     },
     doLogin: function (e) {
         let reg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
         let regRes = reg.test(e.detail.value.mail);
-        console.log(regSes)
         //验证邮箱有效性通过
         if (regRes) {
             let email = e.detail.value.mail;
